@@ -167,6 +167,17 @@ header {
     }
   }
 
+  &.inset {
+    padding: 20px 0;
+    background: url("@img/header-inset.svg") center no-repeat;
+    .header {
+      max-width: 1250px;
+      height: 78px;
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
 }
 
 
