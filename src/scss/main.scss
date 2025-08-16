@@ -194,10 +194,11 @@ header {
     }
 
     &__content {
-      width: 1045px;
+      width: 100%;
+      max-width: 1045px;
       position: relative;
       transition: all .3s ease;
-    
+
       &.hidden {
         opacity: 0;
         visibility: hidden;
@@ -298,6 +299,23 @@ header {
       bottom: 0;
       left: 0;
       background:url("@img/border-4.webp");
+    }
+  }
+
+  &--blue {
+    div {
+      &:nth-child(1) {
+        background:url("@img/border-blue-1.webp");
+      }
+      &:nth-child(2) {
+        background:url("@img/border-blue-2.webp");
+      }
+      &:nth-child(3) {
+        background:url("@img/border-blue-3.webp");
+      }
+      &:nth-child(4) {
+        background:url("@img/border-blue-4.webp");
+      }
     }
   }
 }
@@ -417,6 +435,38 @@ header {
     display: none;
   }
 }
+
+.footer {
+  display: flex;
+  height: 122px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 20px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #2d2d2d;
+  }
+
+  &__links {
+    width: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 
 
 
