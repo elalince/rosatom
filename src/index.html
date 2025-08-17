@@ -5,8 +5,11 @@
     })
 <body>
     @@include('html/header-inset.html',{})
-    <main>
+    <main data-main="1">
         <div class="top-block-inset main-width">
+            <a class="back-link" href="/">на главную <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.1999 8L8.09946 0.958427L0.999023 8" stroke="#B5B5B5" />
+            </svg></a>
             <div class="top-block-inset__left">
             <div class="top-block-inset__counter">
                 <div class="top-block-inset__counter-list">
@@ -31,14 +34,21 @@
             </div>
             <div class="top-block-inset__right top-block-inset__right--1">
                 <img src="@img/photo-1.webp">
-                <div class="top-block-inset__element top-block-inset__element--1">
-                    <img src="@img/inset-element-1.webp">
+                <div class="top-block-inset__element top-block-inset__element--1 decor">
                 </div>
-                <div class="top-block-inset__element top-block-inset__element--2">
-                    <img src="@img/inset-element-2.webp">
+                <div class="top-block-inset__element top-block-inset__element--2 decor">
+
                 </div>
             </div>
         </div>
+        <section class="content">
+            @@include('html/content-type-1.html',{})
+        </section>
+        <a class="to-top">
+            наверх <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 15.078L8.10301 8.03898L1 1" stroke="#B5B5B5" />
+        </svg>
+        </a>
     </main>
     @@include('html/footer.html',{})
 </body>

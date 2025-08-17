@@ -6,6 +6,9 @@ flsFunctions.starMouseFollow();
 flsFunctions.springScrollEffect();
 flsFunctions.setMainSliderLeftPadding();
 flsFunctions.mainSlider();
+flsFunctions.compareDataAttributes();
+flsFunctions.toTopButton();
+flsFunctions.scrollReveal();
 
 
 

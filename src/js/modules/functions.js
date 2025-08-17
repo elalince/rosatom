@@ -85,22 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 export function starMouseFollow() {
-    const star = document.querySelector('.top-block__star');
+    const decorElements = document.querySelectorAll('.decor');
 
-    if (!star) return;
+    if (!decorElements.length) return;
 
     let mouseX = 0;
     let mouseY = 0;
-    let starX = 0;
-    let starY = 0;
-
-    // Добавляем плавный переход для создания эффекта задержки
-    star.style.transition = 'transform 0.2s ease-out';
-
-    // Получаем начальную позицию звезды
-    const starRect = star.getBoundingClientRect();
-    const centerX = starRect.left + starRect.width / 2;
-    const centerY = starRect.top + starRect.height / 2;
 
     // Обработчик движения мыши
     document.addEventListener('mousemove', (e) => {
@@ -108,9 +98,14 @@ export function starMouseFollow() {
         mouseY = e.clientY;
     });
 
-    // Функция анимации с задержкой
-    function animateStar() {
-        // Вычисляем расстояние от курсора до центра звезды
+    // Функция анимации для одного элемента
+    function animateDecor(element) {
+        // Получаем позицию элемента
+        const rect = element.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+
+        // Вычисляем расстояние от курсора до центра элемента
         const deltaX = mouseX - centerX;
         const deltaY = mouseY - centerY;
 
@@ -119,31 +114,45 @@ export function starMouseFollow() {
         const sensitivity = 0.02;
 
         // Вычисляем смещение с учетом чувствительности (инвертируем движение)
-        starX = -deltaX * sensitivity;
-        starY = -deltaY * sensitivity;
+        const elementX = -deltaX * sensitivity;
+        const elementY = -deltaY * sensitivity;
 
         // Ограничиваем максимальное смещение
-        starX = Math.max(-maxOffset, Math.min(maxOffset, starX));
-        starY = Math.max(-maxOffset, Math.min(maxOffset, starY));
+        const limitedX = Math.max(-maxOffset, Math.min(maxOffset, elementX));
+        const limitedY = Math.max(-maxOffset, Math.min(maxOffset, elementY));
 
         // Применяем трансформацию с плавной анимацией
-        star.style.transform = `translate(${starX}px, ${starY}px) rotate(${starX * 0.5}deg)`;
-
-        // Продолжаем анимацию
-        requestAnimationFrame(animateStar);
+        element.style.transform = `translate(${limitedX}px, ${limitedY}px) rotate(${limitedX * 0.5}deg)`;
     }
 
+    // Функция анимации для всех элементов
+    function animateAllDecor() {
+        decorElements.forEach(element => {
+            animateDecor(element);
+        });
+        requestAnimationFrame(animateAllDecor);
+    }
+
+    // Добавляем плавный переход для каждого элемента
+    decorElements.forEach(element => {
+        element.style.transition = 'transform 0.2s ease-out';
+    });
+
     // Запускаем анимацию
-    animateStar();
+    animateAllDecor();
 
     // Добавляем плавность при возврате в исходное положение
     document.addEventListener('mouseleave', () => {
-        star.style.transition = 'transform 0.8s ease-out';
-        star.style.transform = 'translate(0px, 0px) rotate(0deg)';
+        decorElements.forEach(element => {
+            element.style.transition = 'transform 0.8s ease-out';
+            element.style.transform = 'translate(0px, 0px) rotate(0deg)';
+        });
 
         // Убираем transition после анимации
         setTimeout(() => {
-            star.style.transition = '';
+            decorElements.forEach(element => {
+                element.style.transition = '';
+            });
         }, 800);
     });
 }
@@ -225,5 +234,129 @@ export function setMainSliderLeftPadding() {
 
     updatePadding();
     window.addEventListener('resize', updatePadding);
+}
+
+export function compareDataAttributes() {
+    const mainBlock = document.querySelector('main');
+    const sliderItems = document.querySelectorAll('.slider__item');
+    
+    if (!mainBlock || !sliderItems.length) return;
+    
+    // Получаем значение data-main у блока main
+    const mainDataValue = mainBlock.getAttribute('data-main');
+    
+    if (!mainDataValue) return;
+    
+    // Проходим по всем элементам slider__item
+    sliderItems.forEach(item => {
+        const slideDataValue = item.getAttribute('data-slide');
+        
+        // Если значения совпадают, добавляем класс disabled
+        if (slideDataValue === mainDataValue) {
+            item.classList.add('disabled');
+        } else {
+            // Если не совпадают, убираем класс disabled
+            item.classList.remove('disabled');
+        }
+    });
+}
+
+export function toTopButton() {
+    const toTopBtn = document.querySelector('.to-top');
+    
+    if (!toTopBtn) return;
+    
+    // Вычисляем 1vh в пикселях
+    const oneVh = window.innerHeight * 0.01;
+    
+    // Функция проверки видимости кнопки
+    function toggleButtonVisibility() {
+        if (window.scrollY > oneVh) {
+            toTopBtn.classList.add('active');
+        } else {
+            toTopBtn.classList.remove('active');
+        }
+    }
+    
+    // Обработчик скролла
+    window.addEventListener('scroll', toggleButtonVisibility);
+    
+    // Обработчик клика по кнопке
+    toTopBtn.addEventListener('click', () => {
+        // Плавный скролл вверх
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Проверяем начальное состояние
+    toggleButtonVisibility();
+}
+
+export function scrollReveal() {
+    const elements = document.querySelectorAll('.content__title, .content__text');
+    const quoteBlocks = document.querySelectorAll('.quote');
+    
+    if (!elements.length && !quoteBlocks.length) return;
+    
+    // Функция проверки видимости элемента
+    function isElementInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Элемент считается видимым, когда его верхняя граница находится в пределах экрана
+        // с небольшим отступом для более раннего срабатывания
+        return rect.top <= windowHeight * 0.8;
+    }
+    
+    // Функция анимации появления для content элементов
+    function revealElement(element) {
+        if (element.classList.contains('revealed')) return;
+        
+        element.classList.add('revealed');
+    }
+    
+    // Функция активации для quote блоков
+    function activateQuote(quote) {
+        if (quote.classList.contains('active')) return;
+        
+        quote.classList.add('active');
+    }
+    
+    // Функция проверки всех элементов
+    function checkElements() {
+        // Проверяем content элементы
+        elements.forEach(element => {
+            if (isElementInViewport(element)) {
+                revealElement(element);
+            }
+        });
+        
+        // Проверяем quote блоки
+        quoteBlocks.forEach(quote => {
+            if (isElementInViewport(quote)) {
+                activateQuote(quote);
+            }
+        });
+    }
+    
+    // Обработчик скролла с throttling для производительности
+    let ticking = false;
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                checkElements();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    // Добавляем обработчик скролла
+    window.addEventListener('scroll', requestTick);
+    
+    // Проверяем элементы при загрузке страницы
+    checkElements();
 }
 
