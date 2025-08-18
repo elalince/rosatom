@@ -5,20 +5,13 @@
     })
 <body>
     @@include('html/header-inset.html',{})
-    <main data-main="1">
+    <main data-order="1">
         <div class="top-block-inset main-width">
             <a class="back-link" href="/">на главную <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.1999 8L8.09946 0.958427L0.999023 8" stroke="#B5B5B5" />
             </svg></a>
             <div class="top-block-inset__left">
-            <div class="top-block-inset__counter">
-                <div class="top-block-inset__counter-list">
-                    <span>01</span>
-                    <a href="">02</a>
-                    <a href="">03</a>
-                    <a href="">04</a>
-                </div>
-            </div>
+            @@include('html/counter.html',{})
                 <div class="top-block-inset__content">
                     <div class="top-block-inset__job">
                         инженер-строитель

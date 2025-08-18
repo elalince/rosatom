@@ -7,6 +7,7 @@ flsFunctions.springScrollEffect();
 flsFunctions.setMainSliderLeftPadding();
 flsFunctions.mainSlider();
 flsFunctions.compareDataAttributes();
+flsFunctions.compareDataLinks();
 flsFunctions.toTopButton();
 flsFunctions.scrollReveal();
 

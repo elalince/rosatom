@@ -30,25 +30,30 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    span {
-      font-weight: 500;
-      font-size: 25px;
-      line-height: 120%;
-      color: #004ea8;
-      width: 56px;
-      display: flex;
-      border-top: 5px solid #004ea8;
-      padding-top: 10px;
-    }
-
     a {
       font-weight: 400;
       font-size: 20px;
       line-height: 120%;
       color: #b5b5b5;
       width: 56px;
-      display: flex;
+      display: none;
       padding-top: 15px;
+    }
+
+    a.current {
+      display: flex;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 120%;
+      color: #004ea8;
+      border-top: 5px solid #004ea8;
+      padding-top: 10px;
+    }
+
+    a.current + a,
+    a.current + a + a,
+    a.current + a + a + a {
+      display: flex;
     }
   }
 

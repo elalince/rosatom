@@ -238,26 +238,51 @@ export function setMainSliderLeftPadding() {
 
 export function compareDataAttributes() {
     const mainBlock = document.querySelector('main');
+    const topCounter = document.querySelectorAll('.top-block-inset__counter-list');
     const sliderItems = document.querySelectorAll('.slider__item');
-    
+    const navItems = document.querySelectorAll('.nav__item');
+
     if (!mainBlock || !sliderItems.length) return;
     
-    // Получаем значение data-main у блока main
-    const mainDataValue = mainBlock.getAttribute('data-main');
-    
+    const mainDataValue = mainBlock.getAttribute('data-order');
     if (!mainDataValue) return;
-    
-    // Проходим по всем элементам slider__item
+
     sliderItems.forEach(item => {
         const slideDataValue = item.getAttribute('data-slide');
-        
-        // Если значения совпадают, добавляем класс disabled
         if (slideDataValue === mainDataValue) {
             item.classList.add('disabled');
         } else {
-            // Если не совпадают, убираем класс disabled
             item.classList.remove('disabled');
         }
+    });
+
+    topCounter.forEach(counter => {
+        counter.classList.add('top-block-inset__counter-list--' + mainDataValue);
+
+        const links = counter.querySelectorAll('a');
+        links.forEach((link, idx) => {
+            if ((idx + 1).toString() === mainDataValue) {
+                link.classList.add('current');
+            } else {
+                link.classList.remove('current');
+            }
+        });
+    });
+}
+
+export function compareDataLinks() {
+    // Получаем все nav__item и все counter-item
+    const navItems = document.querySelectorAll('.nav__item');
+    const counterLinks = document.querySelectorAll('.top-block-inset__counter-item');
+
+    navItems.forEach(navItem => {
+        const itemNum = navItem.getAttribute('data-link'); // используем data-link!
+        const href = navItem.getAttribute('href');
+        // Находим все ссылки с нужным data-count
+        const matchingCounterLinks = document.querySelectorAll(`.top-block-inset__counter-item[data-count="${itemNum}"]`);
+        matchingCounterLinks.forEach(counterLink => {
+            counterLink.setAttribute('href', href || '');
+        });
     });
 }
 
