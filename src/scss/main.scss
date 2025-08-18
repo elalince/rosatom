@@ -369,7 +369,7 @@ header {
 .spring {
   position: relative;
   width: 329px;
-  height: 250px;
+  height: 232px;
 
 
   &__item {
@@ -426,12 +426,6 @@ header {
 }
 
 .circles {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  transform: translateX(-50%);
-
   &__container {
     position: relative;
   }

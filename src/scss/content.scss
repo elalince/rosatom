@@ -161,13 +161,74 @@
       left: 20px;
       top: -45px;
     }
+
+    &--4 {
+      background: url(@img/content-element-4.webp) center no-repeat;
+      background-size: contain;
+      width: 33%;
+      aspect-ratio: 1/1;
+      right: -50px;
+      bottom: -40px;
+    }
+
+    &--5 {
+       background: url(@img/inset-element-3.webp) center no-repeat;
+      background-size: contain;
+      width: 55%;
+      aspect-ratio: 1 / 1;
+      left: -150px;
+      top: 105px;
+    }
+
+    &--6 {
+     background: url(@img/content-element-5.webp) center no-repeat;
+         background-size: contain;
+        width: 12%;
+        height: 19%;
+        top: -5%;
+        right: 8%;
+    }
+    &--7 {
+        background: url(@img/content-element-6.webp) center no-repeat;
+        background-size: contain;
+        width: 37%;
+        height: 16%;
+        bottom: 3%;
+        right: -10%;
+    }
   }
 
   &__spring {
     position: absolute;
-    bottom: 155px;
-    right: -155px;
+
     z-index: 1;
+
+    &--1 {
+   bottom: 155px;
+    right: -155px;
+    }
+
+    &--2 {
+    bottom: 100px;
+    left: -165px;
+    }
+  }
+
+
+  &__circles {
+      position: absolute;
+      z-index: 1;
+
+      &--1 {
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%);
+      }
+
+      &--2 {
+         bottom: 0;
+        right: -200px;
+      }
   }
 
   &__big-image {

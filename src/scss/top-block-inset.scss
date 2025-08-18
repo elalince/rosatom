@@ -119,7 +119,7 @@
     &--1 {
       .top-block-inset__element--1 {
         background: url(@img/inset-element-1.webp) center no-repeat;
-        background-size: cover;
+        background-size: contain;
         top: 10%;
         width: 36%;
         left: -18%;
@@ -128,10 +128,30 @@
 
       .top-block-inset__element--2 {
         background: url(@img/inset-element-2.webp) center no-repeat;
-        background-size: cover;
+        background-size: contain;
         top: 58%;
         width: 18%;
         right: 2%;
+        aspect-ratio: 1/1;
+      }
+    }
+
+     &--2 {
+      .top-block-inset__element--1 {
+        background: url(@img/inset-element-3.webp) center no-repeat;
+        background-size: contain;
+        top: 12%;
+        width: 50%;
+        left: -22%;
+        aspect-ratio: 1/1;
+      }
+
+      .top-block-inset__element--2 {
+        background: url(@img/inset-element-4.webp) center no-repeat;
+        background-size: contain;
+        top: 70%;
+        width: 14%;
+        right: -3%;
         aspect-ratio: 1/1;
       }
     }
