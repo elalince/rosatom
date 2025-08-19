@@ -1,7 +1,11 @@
 <footer>
     <div class="footer main-width">
         <a class="footer__logo" href="">
-            <img src="img/logo-blue.svg">
+            <picture>
+                <source media="(max-width: 768px)" srcset="img/logo-blue-mobile.svg">
+                <!-- Если разрешение больше 768px, используем исходное изображение -->
+                <img src="img/logo-blue.svg">
+            </picture>
         </a>
         <div class="footer__content">
             <div class="footer__copyright">
@@ -20,11 +24,11 @@
                 </a>
             </div>
         </div>
-        <a href="">
+        <a href="" class="footer__logo-womanru">
             <img src="img/womanru_logo-blue.svg">
         </a>
     </div>
-
+    <div class="cursor"></div>
     @@include('../html/svg.html',{})
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>

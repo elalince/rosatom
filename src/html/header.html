@@ -1,7 +1,13 @@
 <header>
     <div class="header main-width">
         <a class="header__logo" href="">
-           <img src="img/logo.svg">
+            <picture>
+
+                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                <!-- Если разрешение больше 768px, используем исходное изображение -->
+                <img src="img/logo.svg">
+            </picture>
+
         </a>
         <div class="header__center show-nav">
             героини

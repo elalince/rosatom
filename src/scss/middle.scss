@@ -1,0 +1,92 @@
+@media (max-width: 1440px) {
+
+  header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top-block {
+    padding-left: 16px;
+    padding-right: 16px;
+
+  .top-block__title h1 {
+    font-size: 8vw;
+  }
+}
+
+  .nav__name {
+    font-size: 3vw;
+  }
+
+  .main-slider__left {
+    width: 25%;
+  }
+
+  .main-slider__content {
+    width: 100%;
+  }
+  .main-slider__title {
+    font-size: 3vw;
+  }
+
+  //.slider {
+  //  padding-left: 1vw;
+  //}
+}
+
+@media (max-width: 1024px) {
+  //main {
+  //  overflow-x: hidden;
+  //}
+  .main-slider {
+    flex-direction: column;
+    padding: 0 16px 60px !important;
+    gap: 0;
+
+    &__left {
+      width: 100%;
+      padding: 0 16px 40px;
+
+    }
+    &__content {
+      gap: 30px;
+      width: 100%;
+    }
+    &__atom {
+      top: -110px;
+      right: -45px;
+      width: 165px;
+      height: 165px;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+
+    &__button {
+      margin: auto;
+    }
+
+    &__right, &__right.expanded {
+      margin-left: -16px;
+      margin-right: -16px;
+      width: auto;
+      padding: 0 16px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+  }
+  .slider {
+    width: 100%;
+  }
+
+  .full-slider-btn {
+    display: none;
+  }
+  .slider__button--prev.hidden, .slider__button--prev.hidden .slider__button--container
+  {
+    display: flex;
+  }
+}

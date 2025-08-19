@@ -7,7 +7,7 @@
 
   &__close {
     position: relative;
-    cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,7 @@
     font-family: "Unbounded", sans-serif;
     color: #fff;
     position: relative;
-    cursor: pointer;
+
 
     &:after {
       content: '';
@@ -125,7 +125,7 @@
         opacity: 1;
         transform: translateX(0);
       }
-      .nav__element--2 { 
+      .nav__element--2 {
         transform: translateX(0);
       }
   }

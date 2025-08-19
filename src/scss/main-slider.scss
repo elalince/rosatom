@@ -8,9 +8,7 @@
     // max-width: 1440px;
     // margin: 0 auto;
 
-    &.expanded {
-        padding: 0 !important;
-    }
+
 
     &__left {
         display: flex;
@@ -66,7 +64,7 @@
         font-size: 14px;
         line-height: 120%;
         color: #004ea8;
-        cursor: pointer;
+
         width: 300px;
 
         img {
@@ -106,12 +104,25 @@
             width: 100%;
             flex-grow: 1;
 
+
             &:before {
                 display: none;
             }
 
             .slider {
                 width: 100%;
+            }
+
+            .full-slider-btn {
+                display: none;
+            }
+
+            .slider__button--prev.hidden {
+                display: flex;
+
+            .slider__button--container {
+                display: flex;
+            }
             }
         }
     }
@@ -137,7 +148,7 @@
         height: 100%;
         position: relative;
         width: 298px !important;
-        cursor: pointer;
+
         padding-top: 60px;
         z-index: 1;
 
@@ -340,7 +351,7 @@
         display: flex;
         align-items: center;
         z-index: 2;
-        cursor: pointer;
+
 
         &--prev {
             left: 0;
@@ -397,6 +408,6 @@
     }
 
     &__pagination {
-        display: none;
+        display: none !important;
     }
 }

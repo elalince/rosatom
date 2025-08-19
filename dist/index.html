@@ -14,274 +14,322 @@
 
 </head>
 
-<body>
-    <header class="inset">
-    <div class="header header--inset main-width">
+<body class="index-page">
+    <header>
+    <div class="header main-width">
         <a class="header__logo" href="">
-           <img src="img/logo-blue.svg">
+            <picture>
+
+                <source media="(max-width: 768px)" srcset="img/logo-mobile.svg">
+                <!-- Если разрешение больше 768px, используем исходное изображение -->
+                <img src="img/logo.svg">
+            </picture>
+
         </a>
+        <div class="header__center show-nav">
+            героини
+        </div>
+        <a href="" class="header__logo header__logo--womanru"><img src="img/womanru_logo.svg"></a>
     </div>
 </header>
 
-    <main data-order="2">
-        <div class="top-block-inset main-width">
-            <a class="back-link" href="/">на главную <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.1999 8L8.09946 0.958427L0.999023 8" stroke="#B5B5B5" />
-            </svg></a>
-            <div class="top-block-inset__left">
-            <div class="top-block-inset__counter">
-                        <div class="top-block-inset__counter-list">
-                            <a href="" class="top-block-inset__counter-item" data-count="1">01</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="2">02</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="3">03</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="4">04</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="5">05</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="6">06</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="7">07</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="8">08</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="9">09</a>
-                            <a href="" class="top-block-inset__counter-item" data-count="10">10</a>
+    <main>
+        <div class="top-block">
+            <div class="top-block__content">
+                <div class="top-block__title">
+                    росатом:
+                    <h1>Женщины,<br>
+                        меняющие<br>
+                        мир!</h1>
+                </div>
+                <div class="top-block__spring">
+                    <div class="spring">
+                        <div class="spring__item spring__item--1">
+                            <div class="spring__item-container">
+                                <img src="img/ellipse.webp">
+                            </div>
+                        </div>
+                        <div class="spring__item spring__item--2">
+                            <div class="spring__item-container">
+                                <img src="img/ellipse-2.webp">
+                                <div class="spring__ball spring__ball--1">
+                                    <img src="img/ball.webp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spring__item spring__item--3">
+                            <div class="spring__item-container">
+                                <img src="img/ellipse.webp">
+                            </div>
+                        </div>
+                        <div class="spring__item spring__item--4">
+                            <div class="spring__item-container">
+                                <img src="img/ellipse-3.webp">
+                            </div>
+                        </div>
+                        <div class="spring__item spring__item--5">
+                            <div class="spring__item-container">
+                                <img src="img/ellipse.webp">
+                                <div class="spring__ball spring__ball--2">
+                                    <img src="img/ball-2.webp">
+                                </div>
+                                <div class="spring__ball spring__ball--3">
+                                    <img src="img/ball-3.webp">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                <div class="top-block-inset__content">
-                    <div class="top-block-inset__job">
-                      атомный энергентик
-                    </div>
-                    <div class="top-block-inset__name">
-                       Вера атарова
-                    </div>
-                    <div class="top-block-inset__text">
-                        Строим атомные станции — это не просто работа, а ответственность перед будущими поколениями на века вперёд
-                    </div>
+                </div>
+                <div class="top-block__text">
+                    Госкорпорация "Росатом" – это гораздо больше, чем просто атомная энергия. Это мощь науки, передовые энергетические технологии, невообразимые квантовые вычисления, балансирующая на грани с чудом ядерная медицина, инновационные  сверхсовременные новые материалы и, конечно, просто покорение необъятной Арктики! Но в первую очередь это люди! Те, кто каждый день делает жизнь миллионов лучше. К 80-летнему юбилею атомной отрасли вместе с Woman.ru мы запускаем новый вдохновляющий проект, посвященный женщинам "Росатома"!
+                </div>
+                <div class="top-block__star decor">
+                    <img src="img/star.webp">
                 </div>
             </div>
-            <div class="top-block-inset__right top-block-inset__right--2">
-                <img src="img/photo-2.webp">
-                <div class="top-block-inset__element top-block-inset__element--1 decor">
+
+            <div class="top-block__nav">
+               <div class="nav main-width">
+                    <div class="nav__close">
+                        <a><img src="img/close.webp"></a>
+                        <div class="close__border">
+                            <div class="border">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav__list">
+                        <a href="1.html" class="nav__item" data-link="1">
+                            <div class="nav__number">
+                                01
+                            </div>
+                            <div class="nav__name">
+                                инна Стамова
+                            </div>
+                            <div class="nav__border">
+                                <div class="border">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="2.html" class="nav__item" data-link="2">
+                            <div class="nav__number">
+                                02
+                            </div>
+                            <div class="nav__name">
+                                Вера атарова
+                            </div>
+                            <div class="nav__border">
+                                <div class="border">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="3.html" class="nav__item" data-link="3">
+                            <div class="nav__number">
+                                03
+                            </div>
+                            <div class="nav__name">
+                                Татьяна Резцова
+                            </div>
+                            <div class="nav__border">
+                                <div class="border">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="4.html" class="nav__item" data-link="4">
+                            <div class="nav__number">
+                                04
+                            </div>
+                            <div class="nav__name">
+                                Юлия Гранитова
+                            </div>
+                            <div class="nav__border">
+                                <div class="border">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="5.html" class="nav__item" data-link="5">
+                            <div class="nav__number">
+                                05
+                            </div>
+                            <div class="nav__name">
+                                Алина Коршунова
+                            </div>
+                            <div class="nav__border">
+                                <div class="border">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </a>
+<!--                        <a href="6.html" class="nav__item" data-link="5">-->
+<!--                            <div class="nav__number">-->
+<!--                                06-->
+<!--                            </div>-->
+<!--                            <div class="nav__name">-->
+<!--                                Алина Коршунова-->
+<!--                            </div>-->
+<!--                            <div class="nav__border">-->
+<!--                                <div class="border">-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a href="7.html" class="nav__item" data-link="5">-->
+<!--                            <div class="nav__number">-->
+<!--                                07-->
+<!--                            </div>-->
+<!--                            <div class="nav__name">-->
+<!--                                Алина Коршунова-->
+<!--                            </div>-->
+<!--                            <div class="nav__border">-->
+<!--                                <div class="border">-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a href="8.html" class="nav__item" data-link="5">-->
+<!--                            <div class="nav__number">-->
+<!--                                08-->
+<!--                            </div>-->
+<!--                            <div class="nav__name">-->
+<!--                                Алина Коршунова-->
+<!--                            </div>-->
+<!--                            <div class="nav__border">-->
+<!--                                <div class="border">-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a href="9.html" class="nav__item" data-link="5">-->
+<!--                            <div class="nav__number">-->
+<!--                                09-->
+<!--                            </div>-->
+<!--                            <div class="nav__name">-->
+<!--                                Алина Коршунова-->
+<!--                            </div>-->
+<!--                            <div class="nav__border">-->
+<!--                                <div class="border">-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                        <a href="10.html" class="nav__item" data-link="5">-->
+<!--                            <div class="nav__number">-->
+<!--                                10-->
+<!--                            </div>-->
+<!--                            <div class="nav__name">-->
+<!--                                Алина Коршунова-->
+<!--                            </div>-->
+<!--                            <div class="nav__border">-->
+<!--                                <div class="border">-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                    <div></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </a>-->
+                    </div>
+                    <div class="nav__images-list">
+                        <div class="nav__images-item" data-image="1" style="background-image: url(img/photo-1.webp)">
+                            <div class="nav__element nav__element--1">
+                                <img src="img/element-1.webp">
+                            </div>
+                            <div class="nav__element nav__element--2">
+                                <img src="img/element-2.webp">
+                            </div>
+                        </div>
+                        <div class="nav__images-item" data-image="2" style="background-image: url(img/photo-2.webp)">
+                            <div class="nav__element nav__element--1">
+                                <img src="img/element-1.webp">
+                            </div>
+                            <div class="nav__element nav__element--2">
+                                <img src="img/element-2.webp">
+                            </div>
+                        </div>
+                        <div class="nav__images-item" data-image="3" style="background-image: url(img/photo-1.webp)">
+                            <div class="nav__element nav__element--1">
+                                <img src="img/element-1.webp">
+                            </div>
+                            <div class="nav__element nav__element--2">
+                                <img src="img/element-2.webp">
+                            </div>
+                        </div>
+                        <div class="nav__images-item" data-image="4" style="background-image: url(img/photo-2.webp)">
+                            <div class="nav__element nav__element--1">
+                                <img src="img/element-1.webp">
+                            </div>
+                            <div class="nav__element nav__element--2">
+                                <img src="img/element-2.webp">
+                            </div>
+                        </div>
+                        <div class="nav__images-item" data-image="5" style="background-image: url(img/photo-1.webp)">
+                            <div class="nav__element nav__element--1">
+                                <img src="img/element-1.webp">
+                            </div>
+                            <div class="nav__element nav__element--2">
+                                <img src="img/element-2.webp">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="top-block-inset__element top-block-inset__element--2 decor">
-                </div>
+
             </div>
         </div>
-        <section class="content">
-             <div class="content__primary">
-        <div class="content__container">
-            <div class="quote quote--white">
-                В "Росатоме" нет случайных людей. Здесь работают те, кто думает на десятилетия вперёд — и строит будущее буквально своими руками
-                <div class="quote__border">
-                    <div class="border border--big">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
+         <div class="main-slider">
+    <div class="main-slider__left">
+        <div class="main-slider__atom">
+             <div class="main-slider__atom-container">
+                <img src="img/atom.webp">
             </div>
-            <div class="content__wrapper content__wrapper--primary">
-                <div class="content__block-wrapper">
-                    <div class="content__block">
-                        <div class="content__title">
-                            ольга, расскажите, как вы <br>пришли в профессию?
-                        </div>
-                        <div class="content__text">
-                            <p>С детства мне нравилось что-то создавать: собирала сложные конструкторы, чертила планы воображаемых домов. В школе увлекалась математикой и физикой, поэтому выбор инженерной специальности был закономерным. После окончания строительного факультета я рассматривала разные направления, но «Росатом» привлек масштабными проектами и высокими технологиями.</p>
-                            <p>Атомная отрасль — это не только энергетика, но и уникальные строительные задачи: возведение АЭС, научных центров, объектов инфраструктуры. Здесь сочетаются инновации и жесткие требования к безопасности, что делает работу особенно интересной.</p>
-                        </div>
-                    </div>
-                    <div class="content__block">
-                        <div class="content__title">
-                            Чем конкретно вы занимаетесь в компании?
-                        </div>
-                        <div class="content__text">
-                            <p>Я работаю в отделе капитального строительства и курирую подрядные организации на одном из объектов. Мои задачи включают контроль за соблюдением проектной документации и нормативов, координацию между подрядчиками, проектировщиками и заказчиком, анализ сроков и качества работ. Также приходится решать нестандартные ситуации, например, корректировать чертежи, если на стройплощадке обнаруживаются несоответствия.</p>
-                            <p>Каждый день — это новые вызовы: от согласования материалов до проверки расчетов нагрузок на конструкции. Работа требует постоянного внимания, потому что любая ошибка может привести к серьезным последствиям.</p>
-                        </div>
-                    </div>
-                    <div class="content__block">
-                        <div class="content__title">
-                            Какие технологии в строительстве «Росатома» вас впечатляют больше всего?
-                        </div>
-                        <div class="content__text">
-                            <p>Одна из самых впечатляющих технологий — информационное моделирование, или BIM. Мы создаем 3D-модели объектов, которые включают не только геометрию, но и данные о материалах, коммуникациях, сроках эксплуатации. Это значительно снижает количество ошибок и ускоряет процесс строительства.</p>
-                            <p>Еще меня восхищает использование композитных материалов и специальных бетонов, устойчивых к радиации и экстремальным температурам. Например, на некоторых объектах применяются монолитные конструкции с повышенной сейсмостойкостью.</p>
-                            <p>Также нельзя не отметить роботизацию. Дроны проводят мониторинг стройплощадок, а автоматизированные системы контролируют укладку бетона. Это не только повышает точность, но и сокращает время выполнения работ.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="content__image-wrapper">
-                    <div class="content__image">
-                        <div class="content__image-container">
-                        <img src="img/content-image-3.webp">
-                        <div class="content__element content__element--4 decor">
-                        </div>
-                        </div>
-                    </div>
-                    <div class="content__circles content__circles--2 circles">
-                     <div class="content__circles-container">
-                         <img src="img/circles-white.webp">
-                         <div class="circles__ball">
-                             <div class="circles__ball-container">
-                                <img src="img/ball.webp">
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-
-                   
-                </div>
             </div>
-            <div class="quote quote--blue">
-                Госкорпорация "Росатом" – это гораздо больше, чем просто атомная энергия.  Это мощь науки, передовые технологии
-                <div class="quote__border">
-                    <div class="border border--blue border--big">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+            <div class="main-slider__content">
+                <div class="main-slider__title">
+                читайте интервью:
                 </div>
+                <div class="main-slider__text">
+                    <p>Мы познакомим вас с десятью яркими, талантливыми и преданными своему делу женщинами, трудящихся в компании в разных уголках России, чтобы показать, что "Росатом" – это место, где каждый может найти свое призвание! Это мир гордости, вдохновения и стремления к светлому будущему, где передовые технологии и поддержка гениальных специалистов превращают мечту в реальность.</p>
+                </div>
+                <div class="main-slider__button">
+                    <img src="img/eye.webp">
+                    Следите за обновлениями! <br>Новые интервью будут добавляться регулярно
             </div>
         </div>
     </div>
- <div class="content__big-image">
-     <img src="img/big-image-3.webp">
- </div>
- <div class="content__secondary">
-     <div class="content__container">
-         <div class="content__wrapper content__wrapper--secondary">
-             <div class="content__image-wrapper">
-                 <div class="content__image">
-                     <div class="content__image-container">
-                         <img src="img/content-image-4.webp">
-                         <div class="content__element content__element--5 decor">
-                         </div>
-                          <div class="content__element content__element--6 decor">
-                         </div>
-                     </div>
-                 </div>
-                 <div class="content__spring content__spring--2">
-                        <div class="spring">
-                            <div class="spring__item spring__item--1">
-                                <div class="spring__item-container">
-                                    <img src="img/ellipse-blue.webp">
-                                </div>
-                            </div>
-                            <div class="spring__item spring__item--2">
-                                <div class="spring__item-container">
-                                    <img src="img/ellipse-blue-2.webp">
-                                    <div class="spring__ball spring__ball--1">
-                                        <img src="img/ball.webp">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="spring__item spring__item--3">
-                                <div class="spring__item-container">
-                                    <img src="img/ellipse-blue.webp">
-                                </div>
-                            </div>
-                            <div class="spring__item spring__item--4">
-                                <div class="spring__item-container">
-                                    <img src="img/ellipse-blue-3.webp">
-                                </div>
-                            </div>
-                            <div class="spring__item spring__item--5">
-                                <div class="spring__item-container">
-                                    <img src="img/ellipse-blue.webp">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-             </div>
-             <div class="content__block-wrapper">
-                 <div class="content__block">
-                     <div class="content__title">
-                         Какие сложности есть в вашей работе?
-                     </div>
-                     <div class="content__text">
-                         <p>Главная сложность — высокая ответственность. Любая ошибка может привести к серьезным последствиям, поэтому все решения проверяются многократно.</p>
-                         <p>Еще одна проблема — логистика. Некоторые объекты расположены в удаленных регионах, и доставка оборудования требует особого планирования. Бывает, что из-за погодных условий или других факторов сроки сдвигаются, и приходится оперативно перестраивать графики.</p>
-                         <p>И, конечно, работа в условиях жесткого регулирования. Атомная отрасль строго контролируется, поэтому каждый этап сопровождается большим объемом документации. Иногда кажется, что бумажная работа занимает больше времени, чем само строительство.</p>
-                     </div>
-                 </div>
-                 <div class="content__block">
-                     <div class="content__title">
-                         Как «Росатом» поддерживает молодых специалистов?
-                     </div>
-                     <div class="content__text">
-                         <p>Компания активно инвестирует в развитие кадров. Для молодых специалистов есть стажировки и наставничество: новичков курируют опытные инженеры, которые помогают им адаптироваться и перенимать опыт.</p>
-                         <p>Также в «Росатоме» есть корпоративные университеты, где можно пройти курсы по цифровым технологиям или управлению проектами. Еще одна полезная возможность — программы ротации, которые позволяют попробовать себя в разных направлениях, от проектирования до эксплуатации.</p>
-                         <p>Кроме того, компания поддерживает участие в конференциях и патентование разработок. Если у тебя есть интересные идеи, их можно реализовать и получить поддержку.</p>
-                     </div>
-                 </div>
-                 <div class="content__block">
-                     <div class="content__title">
-                         Как выглядит ваш обычный рабочий день?
-                     </div>
-                     <div class="content__text">
-                         <p>Если я на объекте, то день начинается с обхода площадки и совещания с подрядчиками. Проверяю, соответствуют ли работы графику, контролирую качество, обсуждаю возникшие вопросы.</p>
-                         <p>Если я в офисе, то работаю с документами: изучаю чертежи, готовлю отчеты, согласовываю изменения. Часто участвую в онлайн-совещаниях с коллегами из других регионов, потому что проекты у нас масштабные и требуют постоянной координации.</p>
-                         <p>Осознание, что моя работа влияет на будущее. АЭС, научные реакторы, центры ядерной медицины — все это служит десятилетиями, и приятно осознавать, что ты причастен к таким важным проектам.</p>
-                         <p>А еще меня мотивирует возможность учиться у лучших. В «Росатоме» работают профессионалы мирового уровня, и каждый день — это новый опыт.</p>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <div class="content__big-image">
-     <img src="img/big-image-4.webp">
- </div>
- <div class="content__primary">
-     <div class="content__container">
-         <div class="quote quote--white">
-             Наши реакторы работают без сбоев, обеспечивая свет в домах и развитие промышленности — это гордость атомной отрасли
-             <div class="quote__border">
-                 <div class="border border--big">
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                     <div></div>
-                 </div>
-             </div>
-         </div>
-         <div class="content__wrapper content__wrapper--primary">
-             <div class="content__block-wrapper">
-                 <div class="content__block">
-                     <div class="content__title">Ваши советы тем, кто хочет стать инженером-строителем в атомной отрасли?
-                     </div>
-                     <div class="content__text">
-                         <p>Во-первых, углубляйте знания в математике, физике и материаловедении. Без крепкой теоретической базы в этой сфере делать нечего.</p>
-                         <p>Во-вторых, осваивайте современные программы, такие как AutoCAD, Revit, SCAD. Они сильно упрощают работу и делают ее более эффективной. В-третьих, участвуйте в практиках и конкурсах, например, в чемпионатах WorldSkills. Это отличный способ получить реальный опыт и познакомиться с будущими коллегами.И, наконец, развивайте soft skills — умение вести переговоры, управлять проектами, работать в команде. Технические знания важны, но без этих навыков будет сложно.</p>
-                         <p>И главное — будьте готовы к тому, что строительство — это не только расчеты, но и реальная ответственность за каждую деталь.</p>
-                     </div>
-                 </div>
-                 <div class="content__block">
-                     <div class="content__title">
-                         Чем конкретно вы занимаетесь в компании?
-                     </div>
-                     <div class="content__text">
-                         <p>Я работаю в отделе капитального строительства и курирую подрядные организации на одном из объектов. Мои задачи включают контроль за соблюдением проектной документации и нормативов, координацию между подрядчиками, проектировщиками и заказчиком, анализ сроков и качества работ. Также приходится решать нестандартные ситуации, например, корректировать чертежи, если на стройплощадке обнаруживаются несоответствия.</p>
-                         <p>Каждый день — это новые вызовы: от согласования материалов до проверки расчетов нагрузок на конструкции. Работа требует постоянного внимания, потому что любая ошибка может привести к серьезным последствиям.</p>
-                     </div>
-                 </div>
-             </div>
-             <div class="content__image-wrapper">
-                 <div class="content__image">
-                     <div class="content__image-container">
-                         <img src="img/content-image-5.webp">
-                         <div class="content__element content__element--6 decor">
-                         </div>
-                          <div class="content__element content__element--7 decor">
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
- <div class="inset-title">читайте также:</div>
- <div class="main-slider">
-    <div class="main-slider__right expanded">
+    <div class="main-slider__right">
         <div class="swiper slider">
     <div class="slider__pagination"></div>
     <div class="swiper-wrapper slider__container">
@@ -408,7 +456,7 @@
             </div>
         </a>
     </div>
-    <div class="slider__button slider__button--prev">
+    <div class="slider__button slider__button--prev hidden">
         <div class="slider__button--container">
             <img src="img/arrow.webp" alt="">
             <div class="button__border">
@@ -434,26 +482,33 @@
             </div>
         </div>
     </div>
+    <div class="slider__button full-slider-btn">
+        <div class="slider__button--container">
+            <img src="img/arrow.webp" alt="">
+            <div class="button__border">
+                <div class="border border--blue">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
     </div>
 </div>
 
-
-
-
-
-        </section>
-        <a class="to-top">
-            наверх <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 15.078L8.10301 8.03898L1 1" stroke="#B5B5B5" />
-        </svg>
-        </a>
     </main>
     <footer>
     <div class="footer main-width">
         <a class="footer__logo" href="">
-            <img src="img/logo-blue.svg">
+            <picture>
+                <source media="(max-width: 768px)" srcset="img/logo-blue-mobile.svg">
+                <!-- Если разрешение больше 768px, используем исходное изображение -->
+                <img src="img/logo-blue.svg">
+            </picture>
         </a>
         <div class="footer__content">
             <div class="footer__copyright">
@@ -472,11 +527,11 @@
                 </a>
             </div>
         </div>
-        <a href="">
+        <a href="" class="footer__logo-womanru">
             <img src="img/womanru_logo-blue.svg">
         </a>
     </div>
-
+    <div class="cursor"></div>
     <div class="svg">
 
 </div>
