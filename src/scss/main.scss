@@ -415,22 +415,27 @@ header {
     &--1 {
       top: 68%;
       left: 68%;
-      //animation: ballOrbit 20s linear infinite;
+       width: 25px;
+      height: 25px;
+      transform: translate(70%, 100%);
     }
     &--2 {
-      top: -5%;
+      top: 13%;
       left: 15%;
-      //animation: ballOrbit 20s linear infinite;
+      width: 47px;
+      height: 47px;
+      transform: translate(50%, 70%);
     }
     &--3 {
-      width: 199px;
-      height: 249px;
+      width: 115px;
+      height: 115px;
       top: 7%;
       left: 44%;
-      //animation: ballOrbit 20s linear infinite;
+      transform: translate(20%, 30%);
     }
   }
 }
+
 
 .circles {
   &__container {
@@ -650,14 +655,7 @@ header {
   }
 }
 
-@keyframes ballOrbitCSS {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
+
 
 .cursor {
   position: fixed;

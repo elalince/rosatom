@@ -657,4 +657,74 @@ export function removeCurrentSlideFromSlider() {
     });
 }
 
+export function ellipsBalls() {
+  const balls = [
+    { 
+      el: document.querySelector(".spring__ball--1"), 
+      size: 25, 
+      a: 310 / 2, 
+      b: 146 / 2, 
+      theta: -10 * Math.PI / 180 
+    },
+    { 
+      el: document.querySelector(".spring__ball--2"), 
+      size: 47, 
+      a: 310 / 2, 
+      b: 146 / 2, 
+      theta: -10 * Math.PI / 180 
+    },
+    { 
+      el: document.querySelector(".spring__ball--3"), 
+      size: 115, 
+      a: 310 / 2, 
+      b: 146 / 2, 
+      theta: -10 * Math.PI / 180 
+    },
+    { 
+      el: document.querySelector(".content__spring--2 .spring__ball--1"), 
+      size: 25, 
+      a: 300 / 2, 
+      b: 140 / 2, 
+      theta: 10 * Math.PI / 180 
+    },
+  ];
+
+  let angle = 0;
+
+  function animate() {
+    balls.forEach((ball, i) => {
+      if (!ball.el) return;
+
+      const baseSize = ball.size;
+      const r = baseSize / 2;
+
+      const a = ball.a;
+      const b = ball.b;
+      const centerX = a;
+      const centerY = b;
+      const theta = ball.theta;
+
+      // каждому шару своя фаза, чтобы они не шли "паровозиком"
+      const phase = angle + (i * Math.PI * 2) / balls.length;
+
+      // координаты на эллипсе
+      const x = centerX + a * Math.cos(phase) * Math.cos(theta) - b * Math.sin(phase) * Math.sin(theta);
+      const y = centerY + a * Math.cos(phase) * Math.sin(theta) + b * Math.sin(phase) * Math.cos(theta);
+
+      // масштаб: внизу больше, наверху меньше
+      const scale = 0.5 + 0.3 * (1 + Math.sin(phase)) / 2;
+      const size = baseSize * scale;
+
+      ball.el.style.left = `${x - size / 2}px`;
+      ball.el.style.top = `${y - size / 2}px`;
+      ball.el.style.width = `${size}px`;
+      ball.el.style.height = `${size}px`;
+    });
+
+    angle += 0.02;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
 

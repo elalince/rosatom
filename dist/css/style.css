@@ -349,16 +349,23 @@ header.inset .header:before, header.inset .header:after {
 .spring__ball--1 {
   top: 68%;
   left: 68%;
+  width: 25px;
+  height: 25px;
+  transform: translate(70%, 100%);
 }
 .spring__ball--2 {
-  top: -5%;
+  top: 13%;
   left: 15%;
+  width: 47px;
+  height: 47px;
+  transform: translate(50%, 70%);
 }
 .spring__ball--3 {
-  width: 199px;
-  height: 249px;
+  width: 115px;
+  height: 115px;
   top: 7%;
   left: 44%;
+  transform: translate(20%, 30%);
 }
 
 .circles__container {
@@ -538,14 +545,6 @@ header.inset .header:before, header.inset .header:after {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes ballOrbitCSS {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 .cursor {
@@ -743,6 +742,7 @@ header.inset .header:before, header.inset .header:after {
   left: 118px;
   width: 18px;
   height: 18px;
+  min-height: 18px;
   background: url(/img/ball.webp) center no-repeat;
   background-size: contain;
   animation: atom 10s linear infinite;
@@ -1070,72 +1070,72 @@ header.inset .header:before, header.inset .header:after {
 
 @keyframes atom {
   0% {
-    top: -6px;
-    left: 118px;
+    top: -2.3%;
+    left: 45.2%;
   }
   6.25% {
-    top: 18px;
-    left: 139px;
+    top: 6.9%;
+    left: 53.3%;
   }
   12.5% {
-    top: 55px;
-    left: 153px;
+    top: 21.1%;
+    left: 58.6%;
   }
   18.75% {
-    top: 88px;
-    left: 153px;
+    top: 33.7%;
+    left: 58.6%;
   }
   25% {
-    top: 122px;
-    left: 153px;
+    top: 46.7%;
+    left: 58.6%;
   }
   31.25% {
-    top: 152px;
-    left: 153px;
+    top: 58.2%;
+    left: 58.6%;
   }
   37.5% {
-    top: 183px;
-    left: 153px;
+    top: 70.1%;
+    left: 58.6%;
   }
   43.75% {
-    top: 222px;
-    left: 139px;
+    top: 85.1%;
+    left: 53.3%;
   }
   50% {
-    top: 250px;
-    left: 118px;
+    top: 95.8%;
+    left: 45.2%;
   }
   56.25% {
-    top: 222px;
-    left: 97px;
+    top: 85.1%;
+    left: 37.2%;
   }
   62.5% {
-    top: 183px;
-    left: 83px;
+    top: 70.1%;
+    left: 30%;
   }
   68.75% {
-    top: 152px;
-    left: 83px;
+    top: 58.2%;
+    left: 30%;
   }
   75% {
-    top: 122px;
-    left: 78px;
+    top: 46.7%;
+    left: 30%;
   }
   81.25% {
-    top: 88px;
-    left: 83px;
+    top: 33.7%;
+    left: 30%;
   }
   87.5% {
-    top: 55px;
-    left: 83px;
+    top: 21.1%;
+    left: 32%;
   }
   93.75% {
-    top: 18px;
-    left: 97px;
+    top: 6%;
+    left: 37.2%;
   }
   100% {
-    top: -6px;
-    left: 118px;
+    top: -2.3%;
+    left: 45.2%;
   }
 }
 .top-block-inset {
@@ -1486,6 +1486,9 @@ header.inset .header:before, header.inset .header:after {
 .content__spring--2 {
   bottom: 100px;
   left: -165px;
+}
+.content__spring--2 .spring__ball--1 {
+  transform: translate(20%, 20%);
 }
 .content__circles {
   position: absolute;

@@ -215,6 +215,10 @@
     &--2 {
     bottom: 100px;
     left: -165px;
+ 
+    .spring__ball--1 {
+      transform: translate(20%, 20%);
+    }
     }
   }
 

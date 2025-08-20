@@ -12,6 +12,6 @@ flsFunctions.compareDataAttributes();
 flsFunctions.compareDataLinks();
 flsFunctions.toTopButton();
 flsFunctions.scrollReveal();
-
+flsFunctions.ellipsBalls();
 
 
