@@ -45,19 +45,23 @@ export function showNav() {
     const content = document.querySelector( '.top-block__content');
     const closeLink = document.querySelector( '.nav__close');
     const headerInset = document.querySelector( 'header.inset')
+    const html = document.documentElement;
+
     $(navLink).on('click', function() {
         $(navLink).toggleClass('active');
         $(nav).toggleClass('active');
         $(spring).toggleClass('hidden');
         $(content).toggleClass('hidden');
-        $(headerInset).toggleClass('open')
+        $(headerInset).toggleClass('open');
+        html.classList.add('no-scroll');
     });
     $(closeLink).on('click', function() {
         $(navLink).removeClass('active');
         $(nav).removeClass('active');
         $(spring).removeClass('hidden');
         $(content).removeClass('hidden');
-        $(headerInset).removeClass('open')
+        $(headerInset).removeClass('open');
+        html.classList.remove('no-scroll');
     });
 
 }

@@ -32,6 +32,22 @@
         height: 261px;
     }
 
+    &__atom-container {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 118px;
+            width: 18px;
+            height: 18px;
+            background: url(/img/ball.webp) center no-repeat;
+            background-size: contain;
+            animation: atom 10s linear infinite;
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -409,5 +425,77 @@
 
     &__pagination {
         display: none !important;
+    }
+}
+
+
+@keyframes atom {
+    0% {
+        top: -6px;
+        left: 118px;
+    }
+    6.25% {
+        top: 18px;
+        left: 139px;
+    }
+    12.5% {
+        top: 55px;
+        left: 153px;
+    }
+    18.75% {
+        top: 88px;
+        left: 153px;
+    }
+    25% {
+        top: 122px;
+        left: 153px;
+    }
+    31.25% {
+        top: 152px;
+        left: 153px;
+    }
+    37.5% {
+        top: 183px;
+        left: 153px;
+    }
+    43.75% {
+        top: 222px;
+        left: 139px;
+    }
+    50% {
+        top: 250px;
+        left: 118px;
+    }
+    56.25% {
+        top: 222px;
+        left: 97px;
+    }
+    62.5% {
+        top: 183px;
+        left: 83px;
+    }
+    68.75% {
+        top: 152px;
+        left: 83px;
+    }
+    75% {
+        top: 122px;
+        left: 78px;
+    }
+    81.25% {
+        top: 88px;
+        left: 83px;
+    }
+    87.5% {
+        top: 55px;
+        left: 83px;
+    }
+    93.75% {
+        top: 18px;
+        left: 97px;
+    }
+    100% {
+        top: -6px;
+        left: 118px;
     }
 }

@@ -33,6 +33,15 @@
     flex-direction: column;
     gap: 4vh;
     align-items: flex-start;
+    height: calc(5 * 80px + (4 * 4vh)); 
+    overflow-y: scroll;
+    scrollbar-width: none; // для Firefox
+    -ms-overflow-style: none; // для IE/Edge
+
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
   }
 
   &__item {
@@ -41,7 +50,6 @@
     font-family: "Unbounded", sans-serif;
     color: #fff;
     position: relative;
-
 
     &:after {
       content: '';
