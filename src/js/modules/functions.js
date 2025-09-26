@@ -3,8 +3,6 @@ export function cursor() {
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
-    let cursorX = mouseX;
-    let cursorY = mouseY;
 
     document.addEventListener('mousemove', e => {
         mouseX = e.clientX;
@@ -12,13 +10,9 @@ export function cursor() {
     });
 
     function animate() {
-        // Лёгкая задержка движения (0.15 — скорость приближения)
-        cursorX += (mouseX - cursorX) * 0.15;
-        cursorY += (mouseY - cursorY) * 0.15;
-
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-
+        // Без задержки — сразу ставим координаты
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
         requestAnimationFrame(animate);
     }
 
